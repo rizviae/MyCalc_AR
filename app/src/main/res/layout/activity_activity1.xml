@@ -1,0 +1,272 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity1"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+tools:context=".Activity1"
+>
+
+<!--
+android:id="@+id/activity1"
+<TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />-->
+
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0.0"
+        android:id="@+id/calcbar"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="false"
+        android:background="#8ffbff05"
+        android:layout_below="@+id/section_label"
+        android:layout_gravity="top"
+        android:clickable="false"
+        android:editable="true"
+        android:elegantTextHeight="true"
+        android:focusable="true"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:numeric="signed|integer|decimal"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:visibility="visible"
+        android:gravity="right"
+        android:hint="Results Area"
+        android:layout_marginRight="10dp" />
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+
+        android:id="@+id/mylayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/advanced"
+            android:src="@drawable/advanced"
+            android:clickable="true"
+            android:gravity="right"
+            android:layout_above="@+id/multiply"
+            android:layout_toLeftOf="@+id/clear"
+            android:layout_toStartOf="@+id/clear" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clear"
+            android:src="@drawable/clear"
+            android:clickable="true"
+            android:gravity="right"
+            android:layout_alignTop="@+id/advanced"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+<!--      //  <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="110dp"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:nestedScrollingEnabled="false"
+            android:visibility="visible"
+            android:useDefaultMargins="false"
+            android:id="@+id/grid1"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">-->
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num7"
+                android:src="@drawable/number_7"
+                android:clickable="true"
+                android:cropToPadding="false"
+                android:layout_alignBottom="@+id/num8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/num8"
+            android:src="@drawable/number_8"
+            android:clickable="true"
+            android:layout_alignTop="@+id/num9"
+            android:layout_alignLeft="@+id/num5"
+            android:layout_alignStart="@+id/num5" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num9"
+                android:src="@drawable/number_9"
+                android:clickable="true"
+                android:layout_below="@+id/clear"
+                android:layout_toLeftOf="@+id/divide"
+                android:layout_toStartOf="@+id/divide" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                android:id="@+id/divide"
+                android:clickable="true"
+                android:src="@drawable/divide_sign"
+                android:layout_alignBottom="@+id/numzero"
+                android:layout_toLeftOf="@+id/numCalc"
+                android:layout_toStartOf="@+id/numCalc" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/num4"
+            android:src="@drawable/number_4"
+            android:clickable="true"
+            android:layout_alignTop="@+id/num6"
+            android:layout_toLeftOf="@+id/num5"
+            android:layout_toStartOf="@+id/num5" />
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num5"
+                android:src="@drawable/number_5"
+                android:clickable="true"
+                android:layout_below="@+id/num7"
+                android:layout_alignLeft="@+id/num2"
+                android:layout_alignStart="@+id/num2" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num6"
+                android:src="@drawable/number_6"
+                android:clickable="true"
+                android:layout_alignBottom="@+id/minus"
+                android:layout_toLeftOf="@+id/divide"
+                android:layout_toStartOf="@+id/divide" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/multiply"
+                android:src="@drawable/multiply_sign"
+                android:clickable="true"
+                android:layout_above="@+id/minus"
+                android:layout_alignLeft="@+id/minus"
+                android:layout_alignStart="@+id/minus" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num1"
+                android:src="@drawable/number_1"
+                android:clickable="true"
+                android:layout_above="@+id/numDec"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageButton
+                android:layout_width="79dp"
+                android:layout_height="77dp"
+                android:id="@+id/num2"
+                android:src="@drawable/number_2"
+                android:clickable="true"
+                android:layout_alignTop="@+id/num3"
+                android:layout_toLeftOf="@+id/num3"
+                android:layout_toStartOf="@+id/num3" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/num3"
+                android:src="@drawable/number_3"
+                android:clickable="true"
+                android:layout_alignTop="@+id/num1"
+                android:layout_toRightOf="@+id/numzero"
+                android:layout_toEndOf="@+id/numzero" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minus"
+                android:src="@drawable/minus_sign"
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/numPlus"
+                android:layout_alignStart="@+id/numPlus" />
+
+            <ImageButton
+                android:layout_width="51dp"
+                android:layout_height="78dp"
+                android:id="@+id/numDec"
+                android:src="@drawable/period_symbol"
+                android:clickable="true"
+                android:layout_alignTop="@+id/numCalc"
+                android:layout_alignRight="@+id/num1"
+                android:layout_alignEnd="@+id/num1" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/number_0"
+                android:clickable="true"
+                android:id="@+id/numzero"
+                android:layout_below="@+id/numPlus"
+                android:layout_toLeftOf="@+id/num9"
+                android:layout_toStartOf="@+id/num9" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numCalc"
+                android:src="@drawable/equal_sign"
+                android:clickable="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numPlus"
+                android:src="@drawable/addition_sign"
+                android:clickable="true"
+                android:layout_above="@+id/numCalc"
+                android:layout_alignLeft="@+id/numCalc"
+                android:layout_alignStart="@+id/numCalc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/title_activity1"
+            android:id="@+id/textView"
+            android:layout_alignTop="@+id/advanced"
+            android:layout_toLeftOf="@+id/num8"
+            android:layout_toStartOf="@+id/num8" />
+
+        <!--</GridLayout>-->
+
+    </RelativeLayout>
+</RelativeLayout>
+
+</RelativeLayout>
+

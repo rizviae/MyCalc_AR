@@ -1,0 +1,285 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:id="@+id/dummy">
+
+    <TextView android:id="@+id/section_label" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0.0"
+            android:id="@+id/calcbar"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentEnd="false"
+            android:background="#8ffbff05"
+            android:layout_below="@+id/section_label"
+            android:layout_gravity="top"
+            android:clickable="false"
+            android:editable="true"
+            android:elegantTextHeight="true"
+            android:gravity="right"
+            android:focusable="true"
+            android:inputType="number|numberSigned|numberDecimal"
+            android:numeric="signed|integer|decimal"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/calcbar"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginTop="44dp"
+            android:id="@+id/mylayout2">
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="44dp"
+                android:columnCount="4"
+                android:rowCount="5"
+                android:nestedScrollingEnabled="false"
+                android:visibility="visible"
+                android:useDefaultMargins="false"
+                android:id="@+id/grid2"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageButton
+                    android:layout_width="84dp"
+                    android:layout_height="76dp"
+                    android:id="@+id/sin"
+                    android:src="@drawable/sin_sign"
+                    android:clickable="true"
+                    android:cropToPadding="false"
+                    android:layout_gravity="top"
+                    android:layout_row="0"
+                    android:layout_column="0" />
+
+                <ImageButton
+                    android:layout_width="85dp"
+                    android:layout_height="76dp"
+                    android:id="@+id/cos"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/grid2"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="34dp"
+                    android:src="@drawable/cos_sign"
+                    android:layout_alignBottom="@+id/sin"
+                    android:layout_gravity="top"
+                    android:clickable="true"
+                    android:layout_row="0"
+                    android:layout_column="1" />
+
+                <ImageButton
+                    android:layout_width="82dp"
+                    android:layout_height="77dp"
+                    android:id="@+id/tan"
+                    android:src="@drawable/tan_sign"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/pi"
+                    android:layout_alignStart="@+id/pi"
+                    android:layout_marginLeft="4dp"
+                    android:clickable="true"
+                    android:layout_gravity="top"
+                    android:layout_row="0"
+                    android:layout_column="2" />
+
+                <ImageButton
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/squareroot"
+                    android:src="@drawable/squareroot"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tan"
+                    android:layout_alignBottom="@+id/cos"
+                    android:clickable="true"
+                    android:adjustViewBounds="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_row="0"
+                    android:layout_column="3" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ln"
+                    android:src="@drawable/ln_sign"
+                    android:layout_below="@+id/cos"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:clickable="true"
+                    android:layout_row="1"
+                    android:layout_column="0" />
+
+                <ImageButton
+                    android:layout_width="85dp"
+                    android:layout_height="73dp"
+                    android:id="@+id/log"
+                    android:layout_alignTop="@+id/ln"
+                    android:layout_alignLeft="@+id/cos"
+                    android:layout_alignStart="@+id/cos"
+                    android:src="@drawable/log_sign"
+                    android:clickable="true"
+                    android:layout_row="1"
+                    android:layout_column="1" />
+
+                <ImageButton
+                    android:layout_width="82dp"
+                    android:layout_height="76dp"
+                    android:id="@+id/pi"
+                    android:src="@drawable/pi"
+                    android:layout_below="@+id/cos"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:layout_row="1"
+                    android:layout_column="2" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:id="@+id/e_sign"
+                    android:src="@drawable/e_sign"
+                    android:layout_below="@+id/i"
+                    android:layout_alignLeft="@+id/i"
+                    android:layout_alignStart="@+id/i"
+                    android:clickable="true"
+                    android:layout_row="1"
+                    android:layout_column="3" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/percentage"
+                    android:src="@drawable/percentage"
+                    android:layout_alignBottom="@+id/factorial"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:clickable="true"
+                    android:layout_row="2"
+                    android:layout_column="0" />
+
+                <ImageButton
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/factorial"
+                    android:src="@drawable/exclamation"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ln"
+                    android:layout_toEndOf="@+id/ln"
+                    android:clickable="true"
+                    android:layout_row="2"
+                    android:layout_column="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sqr"
+                    android:layout_alignBottom="@+id/squareroot"
+                    android:layout_alignLeft="@+id/e_sign"
+                    android:layout_alignStart="@+id/e_sign"
+                    android:src="@drawable/sqr_sign"
+                    android:clickable="true"
+                    android:layout_row="2"
+                    android:layout_column="3" />
+
+                <ImageButton
+                    android:layout_width="51dp"
+                    android:layout_height="78dp"
+                    android:id="@+id/leftperen"
+                    android:src="@drawable/leftperen"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/percentage"
+                    android:clickable="true"
+                    android:layout_row="3"
+                    android:layout_column="0" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="78dp"
+                    android:id="@+id/rightperen"
+                    android:src="@drawable/rightperen"
+                    android:layout_below="@+id/percentage"
+                    android:layout_toLeftOf="@+id/numCalc"
+                    android:layout_toStartOf="@+id/numCalc"
+                    android:clickable="true"
+                    android:layout_row="3"
+                    android:layout_column="1" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/numCalc"
+                    android:layout_alignBottom="@+id/rightperen"
+                    android:layout_alignLeft="@+id/squareroot"
+                    android:layout_alignStart="@+id/squareroot"
+                    android:src="@drawable/equal_sign"
+                    android:layout_below="@+id/factorial"
+                    android:layout_alignRight="@+id/squareroot"
+                    android:layout_alignEnd="@+id/squareroot"
+                    android:clickable="true"
+                    android:layout_row="3"
+                    android:layout_column="3" />
+
+            </GridLayout>
+
+        </RelativeLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clear"
+            android:src="@drawable/clear"
+            android:clickable="true"
+            android:gravity="right"
+            android:layout_below="@+id/calcbar"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/basic"
+            android:src="@drawable/basic"
+            android:clickable="true"
+            android:gravity="right"
+            android:layout_alignTop="@+id/clear"
+            android:layout_toLeftOf="@+id/clear"
+            android:layout_toStartOf="@+id/clear" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/title_activity2"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/calcbar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
